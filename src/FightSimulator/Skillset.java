@@ -5,8 +5,6 @@ public interface Skillset {
 
    void skill2(FighterBase target);
 
-   void defenseskill();
-
    void heal();
 
 }

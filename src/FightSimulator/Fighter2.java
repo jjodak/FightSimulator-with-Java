@@ -9,7 +9,7 @@ public class Fighter2 extends FighterBase implements Skillset {
     @Override
     public void skill1(FighterBase target) {
         System.out.println(name + "의 skill1 사용!");
-        double damage = ((atk * 0.3) * (1000 - target.def) / 1000);
+        double damage = ((atk * 0.2) * (1000 - target.def) / 1000);
         if (damage < 0) {
             damage = 0;
         }
@@ -19,13 +19,14 @@ public class Fighter2 extends FighterBase implements Skillset {
         }
         mp -= 10;
 
-        System.out.println(target.name + "에게 공격 : " + damage + " | 잔여 마나 : " + mp);
+        System.out.println(name + "가 " + target.name + "에게 공격 : " + damage + " | 잔여 마나 : " + mp);
     }
 
     @Override
     public void skill2(FighterBase target) {
         System.out.println(name + "의 skill2 사용!");
-        double damage = ((atk * 0.4) * (1000 - target.def) / 1000);
+        double damage = ((atk * 0.2) * (1000 - target.def) / 1000);
+
         if (damage < 0) {
             damage = 0;
         }
@@ -35,23 +36,15 @@ public class Fighter2 extends FighterBase implements Skillset {
         }
         mp -= 20;
 
-        System.out.println(target.name + "에게 공격 : " + damage + " | 잔여 마나 : " + mp);
-    }
-
-    @Override
-    public void defenseskill() {
-        System.out.println(name + "의 defenseskill 사용!");
-        mp -= 15;
-
-        System.out.println("잔여 마나 : " + mp);
+        System.out.println(name + "가 " + target.name + "에게 공격 : " + damage + " | 잔여 마나 : " + mp);
     }
 
     @Override
     public void heal() {
         System.out.println(name + "의 heal 사용!");
-        hp += 20;
-        mp -= 10;
+        double heal = hp + 20;
+        mp -= 30;
 
-        System.out.println("체력 : " + hp + " | 잔여 마나 : " + mp);
+        System.out.println(name + "의 기존 체력 : " + hp + " | " + name + "의 체력 : " + heal + " | 잔여 마나 : " + mp);
     }
 }

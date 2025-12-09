@@ -3,7 +3,7 @@ package FightSimulator;
 abstract class FighterBase {
 
     String name;
-    double maxHp, hp, maxMp, mp, atk, def, spd;
+    double maxHp, hp, maxMp, mp, atk, def;
 
     public FighterBase(String name, double maxHp, double maxMp, double atk, double def) {
         this.name = name;

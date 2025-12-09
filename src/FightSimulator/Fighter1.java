@@ -19,7 +19,7 @@ public class Fighter1 extends FighterBase implements Skillset {
         }
         mp -= 10;
 
-        System.out.println(target.name + "에게 공격 : " + damage + " | 잔여 마나 : " + mp);
+        System.out.println(name + "가 " + target.name + "에게 공격 : " + damage + " | 잔여 마나 : " + mp);
     }
 
     @Override
@@ -36,23 +36,15 @@ public class Fighter1 extends FighterBase implements Skillset {
         }
         mp -= 20;
 
-        System.out.println(target.name + "에게 공격 : " + damage + " | 잔여 마나 : " + mp);
-    }
-
-    @Override
-    public void defenseskill() {
-        System.out.println(name + "의 defenseskill 사용!");
-        mp -= 15;
-
-        System.out.println("잔여 마나 : " + mp);
+        System.out.println(name + "가 " + target.name + "에게 공격 : " + damage + " | 잔여 마나 : " + mp);
     }
 
     @Override
     public void heal() {
         System.out.println(name + "의 heal 사용!");
-        hp += 20;
-        mp -= 10;
+        double heal = hp + 20;
+        mp -= 30;
 
-        System.out.println("체력 : " + hp + " | 잔여 마나 : " + mp);
+        System.out.println(name + "의 기존 체력 : " + hp + " | " + "현재 체력 : " + heal + " | " + "잔여 마나 : " + mp);
     }
 }
