@@ -10,7 +10,7 @@ public class Game {
         Fighter2 player2 = null;
         int turn = 0;
 
-        final int MAX_TOTAL_STAT = 1000;
+        int MAX_TOTAL_STAT = 1000;
         System.out.println("일대일 스킬 게임");
         System.out.println("게임 설명 : q / 아무키를 눌러 시작");
         String beforgame = scanner.nextLine();
@@ -210,6 +210,5 @@ public class Game {
                 }
             }
         }
-
     }
 }
