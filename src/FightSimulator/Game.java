@@ -185,8 +185,8 @@ public class Game {
 
                 System.out.println();
                 System.out.println("===== 턴 : " + turn + " 상태 =====");
-                System.out.println(player1.name + " | 체력: " + player1.hp + " | 마나: ");
-                System.out.println(player2.name + " | 체력: " + player2.hp + " | 마나: ");
+                System.out.println(player1.name + " | 체력: " + player1.hp + " | 마나: " + player1.mp);
+                System.out.println(player2.name + " | 체력: " + player2.hp + " | 마나: " + player2.mp);
             }
             if (player1.hp <= 0) {
                 System.out.println("============ 게임 종료 ============");
